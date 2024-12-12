@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../../components/Layout";
 import { graphql } from "gatsby";
 import Seo from "../../components/Seo";
+import { StaticImage } from "gatsby-plugin-image";
 
 interface IBlogPostProps {
   data: Queries.PostDetailQuery;
@@ -11,7 +12,11 @@ interface IBlogPostProps {
 export default function BlogPost({ data, children }: IBlogPostProps) {
   return (
     <Layout title="">
-      <div>{children}</div>
+      <StaticImage
+        height={500}
+        src="https://images.unsplash.com/photo-1521249607530-ef23405c2d40?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Stickers on the wall"
+      />
     </Layout>
   );
 }
